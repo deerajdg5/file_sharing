@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Successful</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #e8f0fe;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .result-container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 450px;
+        }
+
+        h3 {
+            color: #2d3436;
+        }
+
+        p {
+            margin: 0.5rem 0;
+        }
+
+        a {
+            color: #0984e3;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background: #4a90e2;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .back:hover {
+            background: #357ABD;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h3>File Uploaded Successfully!</h3>
+        <p><strong>Name:</strong> {{ filename }}</p>
+        <p><strong>Size:</strong> {{ file_size }}</p>
+        <p><strong>Type:</strong> {{ file_type }}</p>
+        <p><strong>Uploaded at:</strong> {{ upload_time }}</p>
+        <p><strong>Download URL:</strong> <a href="{{ download_url }}">{{ download_url }}</a></p>
+        <a class="back" href="/">Upload Another File</a>
+    </div>
+</body>
+</html>
